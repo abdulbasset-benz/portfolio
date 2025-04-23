@@ -1,15 +1,13 @@
-import './style.css'
+import React from 'react';
+import './style.css';
+import Navigation from './components/Navigation';
 
 function App() {
   
 
   return (
     <>
-     <div className='container bg-amber-200 h-screen'>
-      
-
-
-     </div>
+     <Navigation />
       
      
     </>
