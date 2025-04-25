@@ -6,11 +6,11 @@ function App() {
   
 
   return (
-    <>
+    <div className="container mx-auto bg-primary h-screen">
      <Navigation />
       
      
-    </>
+    </div>
   )
 }
 
