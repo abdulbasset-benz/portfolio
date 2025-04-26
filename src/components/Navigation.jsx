@@ -16,24 +16,25 @@ const Navigation = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 font-montserrat relative z-10">
+    <div className="container mx-auto p-4 font-montserrat relative">
+      {/* Background elements with adjusted z-index */}
       <img
         src={leftSpotlight}
         alt="Left Spotlight"
-        className="absolute top-0 left-0 "
+        className="absolute -top-32 md:top-0 left-0 z-0 opacity-70"
       />
       <img
         src={rightSpotlight}
         alt="Right Spotlight"
-        className="absolute top-0 right-0"
+        className="absolute -top-32 md:top-0 right-0 z-0 opacity-70"
       />
       <img
         src={gridPattern}
         alt="Pattern"
-        className="absolute top-10 left-1/2 transform -translate-x-1/2 -z-10 max-w-full"
+        className="absolute top-10 left-1/2 transform -translate-x-1/2 z-0 opacity-60 max-w-full"
       />
-      <nav className="flex justify-between items-center md:w-[85%] mx-auto py-2">
-        <div className="flex items-center gap-1 z-20">
+      <nav className="flex justify-between items-center md:w-[85%] mx-auto py-2 relative z-10">
+      <div className="flex items-center gap-1 z-20">
           <img
             src={logo}
             alt="Logo"
@@ -65,7 +66,6 @@ const Navigation = () => {
                 Projects
               </a>
             </li>
-            
           </ul>
         </div>
         <div className="hidden md:flex items-center space-x-10 z-10">
@@ -86,13 +86,13 @@ const Navigation = () => {
           onClick={toggleMenu}
         />
 
-        <div
-          className={`absolute lg:hidden top-20 left-0 w-full flex flex-col items-center gap-6 font-semibold text-lg ${
-            isMenuOpen
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-5"
+         <div
+          className={`fixed lg:hidden top-20 left-0 w-full h-screen flex flex-col items-center gap-6 font-semibold text-lg z-90 ${
+            isMenuOpen 
+              ? "block translate-y-0"
+              : "hidden -translate-y-5"
           } transition-all duration-300 ease-in-out 
-   bg-purple-300/10 backdrop-blur-lg rounded-lg shadow-lg`}
+     bg-purple-300/10 backdrop-blur-lg rounded-lg shadow-lg`}
         >
           <ul className="flex flex-col items-center gap-6 text-slate-50 p-4">
             <li>
