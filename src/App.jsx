@@ -3,7 +3,7 @@ import "./style.css";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
-import MyServices from "./components/MyServices";
+
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Navigation />
       <Hero />
       <AboutMe />
-      <MyServices />
+    
     </div>
   );
 }
