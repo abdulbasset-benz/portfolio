@@ -87,12 +87,12 @@ const Navigation = () => {
         />
 
          <div
-          className={`fixed lg:hidden top-20 left-0 w-full h-screen flex flex-col items-center gap-6 font-semibold text-lg z-90 ${
+          className={`fixed lg:hidden top-20 left-0 w-full h-screen flex flex-col items-center gap-6 font-semibold text-lg z-90  
+     bg-purple-300/10 backdrop-blur-lg rounded-lg shadow-lg ${
             isMenuOpen 
-              ? "block translate-y-0"
-              : "hidden -translate-y-5"
-          } transition-all duration-300 ease-in-out 
-     bg-purple-300/10 backdrop-blur-lg rounded-lg shadow-lg`}
+              ? "block transition-all duration-300 ease-in-out translate-y-0"
+              : "hidden transition-all duration-300 ease-in-out -translate-y-5"
+          } `}
         >
           <ul className="flex flex-col items-center gap-6 text-slate-50 p-4">
             <li>
