@@ -3,7 +3,7 @@ import "./style.css";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
-import ServiceCard from "./components/ServiceCard";
+import Services from "./components/Services";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Hero />
       <AboutMe />
-      <ServiceCard />
+      <Services />
     </div>
   );
 }

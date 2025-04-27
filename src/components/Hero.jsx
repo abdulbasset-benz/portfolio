@@ -5,7 +5,7 @@ import arrow from "../assets/arrow.svg";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto text-center p-6 relative flex flex-col items-center gap-5 text-amber-50 font-montserrat">
+    <div className="container mx-auto text-center p-6 mb-16 relative flex flex-col items-center gap-5 text-amber-50 font-montserrat">
       <img
         src={avatar}
         alt="Avatar"

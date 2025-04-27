@@ -3,12 +3,12 @@ import "../style.css";
 
 const AboutMe = () => {
   return (
-    <div className="text-white h-full bg-primary flex flex-col items-center text-center p-6 mt-7 relative border-t border-t-gray-800 font-poppins">
-      <h1 className="text-5xl font-bold mb-1 bg-clip-text text-transparent bg-slate-50">
+    <div className="text-white bg-primary flex flex-col items-center text-center py-20 relative border-t border-t-gray-800 font-poppins">
+      <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-slate-50">
         About Me
       </h1>
-      <h3 className="text-xl mb-8 bg-clip-text text-transparent bg-text-header animate-pulse">
-        ✨ coding wizard ✨
+      <h3 className="text-xl mb-8 bg-clip-text text-transparent capitalize bg-text-header animate-pulse">
+        ✨ the coding wizard ✨
       </h3>
 
       <p className="mt-4 max-w-2xl text-lg">
