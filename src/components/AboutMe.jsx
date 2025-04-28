@@ -11,7 +11,7 @@ const AboutMe = () => {
         ✨ the coding wizard ✨
       </h3>
 
-      <p className="mt-4 max-w-2xl text-lg">
+      <p className="mt-w max-w-2xl text-md">
         Hi, I'm{" "}
         <span className="font-bold bg-clip-text text-transparent bg-text-header">
           Abdulbasset
@@ -20,19 +20,19 @@ const AboutMe = () => {
         lightning-fast⚡
       </p>
 
-      <p className="mt-4 max-w-2xl text-lg">
+      <p className="mt-4 max-w-2xl text-md">
         With <span className="font-bold">Laravel</span> and{" "}
         <span className="font-bold">React</span>, I turn ideas into sleek,
         high-performance tools that solve real problems. For me, coding is
         artistry: every pixel and line of code must balance beauty with speed.
       </p>
 
-      <p className="mt-4 max-w-2xl text-lg">
+      <p className="mt-4 max-w-2xl text-md">
         I thrive on creating seamless user experiences and collaborating with
         bold thinkers ready to disrupt industries. Let's build something people
         love—and can't live without.
       </p>
-      <div className="mt-2 text-xl bg-clip-text text-transparent bg-text-header font-bold">
+      <div className="mt-2 text-lg bg-clip-text text-transparent bg-text-header font-bold">
         Got a vision? Let's make it{" "}
         <span className=" text-white">UNSTOPPABLE</span>
       </div>
