@@ -4,25 +4,32 @@ import servicesData from "../data/ServicesData";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 bg-primary border-t border-t-gray-800 font-poppins">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-3">My Services</h2>
+          <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent capitalize bg-slate-50">
+            what i do
+          </h1>
+          <h3 className="text-lg sm:text-xl mt-2 mb-6 sm:mb-8 bg-clip-text text-transparent capitalize bg-text-header animate-pulse">
+            ✨ my services ✨
+          </h3>
           <div className="h-1 w-24 bg-secondary mx-auto"></div>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Specialized solutions tailored to bring your digital vision to reality.
+          <p className="text-gray-400 mt-0 max-w-2xl mx-auto text-sm sm:text-base">
+            Specialized solutions tailored to bring your digital vision to
+            reality.
           </p>
         </div>
-        
+
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={index}
               title={service.title}
               description={service.description}
               icon={service.icon}
+              arrow={service.arrow}
             />
           ))}
         </div>
