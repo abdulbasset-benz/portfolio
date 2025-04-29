@@ -16,7 +16,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 font-montserrat relative">
+    <div className="p-4 font-montserrat relative">
       {/* Background elements with adjusted z-index */}
       <img
         src={leftSpotlight}
@@ -26,12 +26,12 @@ const Navigation = () => {
       <img
         src={rightSpotlight}
         alt="Right Spotlight"
-        className="absolute -top-32 md:top-0 right-0 z-0 opacity-70"
+        className="absolute -top-32 md:top-0 right-0 z-0"
       />
       <img
         src={gridPattern}
         alt="Pattern"
-        className="absolute top-10 left-1/2 transform -translate-x-1/2 z-0 opacity-60 max-w-full"
+        className="absolute top-10 left-1/2 transform -translate-x-1/2 z-0 max-w-full"
       />
       <nav className="flex justify-between items-center md:w-[85%] mx-auto py-2 relative z-10">
       <div className="flex items-center gap-1 z-20">
@@ -87,7 +87,7 @@ const Navigation = () => {
         />
 
          <div
-          className={`fixed lg:hidden top-20 left-0 w-full h-screen flex flex-col items-center gap-6 font-semibold text-lg z-90  
+          className={`fixed lg:hidden top-20 left-0 w-full h-screen flex flex-col items-center gap-6 font-semibold text-lg
      bg-purple-300/10 backdrop-blur-lg rounded-lg shadow-lg ${
             isMenuOpen 
               ? "block transition-all duration-300 ease-in-out translate-y-0"
