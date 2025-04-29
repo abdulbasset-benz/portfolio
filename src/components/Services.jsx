@@ -4,7 +4,10 @@ import servicesData from "../data/ServicesData";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-primary border-t border-t-gray-800 font-poppins">
+    <section
+      id="services"
+      className="py-20 bg-primary border-t border-t-gray-800 font-poppins"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -22,7 +25,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 min-h-[400px]">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={index}

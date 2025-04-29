@@ -4,15 +4,17 @@ import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
+import Process from "./components/Process";
 
 
 function App() {
   return (
-    <div className="container mx-auto bg-primary h-screen antialiased">
+    <div className="bg-primary h-screen antialiased">
       <Navigation />
       <Hero />
       <AboutMe />
       <Services />
+      <Process />
     </div>
   );
 }
