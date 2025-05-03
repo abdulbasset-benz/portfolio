@@ -31,10 +31,10 @@ const Navigation = () => {
       <img
         src={gridPattern}
         alt="Pattern"
-        className="absolute top-10 left-1/2 transform -translate-x-1/2 z-0 max-w-full"
+        className="absolute w-full  top-10 left-1/2 transform -translate-x-1/2 z-0 max-w-full"
       />
       <nav className="flex justify-between items-center md:w-[85%] mx-auto py-2 relative z-10">
-      <div className="flex items-center gap-1 z-20">
+        <div className="flex items-center gap-1 z-20">
           <img
             src={logo}
             alt="Logo"
@@ -86,13 +86,13 @@ const Navigation = () => {
           onClick={toggleMenu}
         />
 
-         <div
+        <div
           className={`fixed lg:hidden top-20 left-0 w-full h-screen flex flex-col items-center gap-6 font-semibold text-lg
      bg-purple-300/10 backdrop-blur-lg rounded-lg shadow-lg ${
-            isMenuOpen 
-              ? "block transition-all duration-300 ease-in-out translate-y-0"
-              : "hidden transition-all duration-300 ease-in-out -translate-y-5"
-          } `}
+       isMenuOpen
+         ? "block transition-all duration-300 ease-in-out translate-y-0"
+         : "hidden transition-all duration-300 ease-in-out -translate-y-5"
+     } `}
         >
           <ul className="flex flex-col items-center gap-6 text-slate-50 p-4">
             <li>
