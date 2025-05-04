@@ -5,7 +5,7 @@ import arrow from "../assets/arrow.svg";
 
 const Hero = () => {
   return (
-    <section className="bg-primary text-amber-50 font-montserrat py-20">
+    <section className=" text-amber-50 font-montserrat py-20">
       <div className="container mx-auto flex flex-col items-center gap-5 text-center px-4 relative">
         <img
           src={avatar}
@@ -13,7 +13,8 @@ const Hero = () => {
           className="w-40 h-40 rounded-full shadow-lg object-cover"
         />
         <p className="uppercase text-text-secondary tracking-wide">
-          Dynamic Web Magic with <span className="text-text-secondary">Laravel</span> &{" "}
+          Dynamic Web Magic with{" "}
+          <span className="text-text-secondary">Laravel</span> &{" "}
           <span className="text-text-secondary">React.js</span>
         </p>
         <h1 className="font-inter font-extrabold capitalize text-4xl md:text-5xl lg:text-6xl max-w-5xl">

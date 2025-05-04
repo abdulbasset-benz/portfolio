@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-primary border-t border-t-gray-800 font-poppins"
+      className="py-20 border-t border-t-gray-800 font-poppins"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

@@ -3,8 +3,8 @@ import "../style.css";
 
 const AboutMe = () => {
   return (
-    <section className="bg-primary text-white border-t border-gray-800 font-poppins py-20 px-4">
-      <div className="container mx-auto flex flex-col items-center text-center relative">   
+    <section className=" text-white border-t border-gray-800 font-poppins py-20 px-4">
+      <div className="container mx-auto flex flex-col items-center text-center relative">
         <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-slate-50">
           About Me
         </h1>
@@ -30,8 +30,8 @@ const AboutMe = () => {
 
         <p className="mt-4 max-w-2xl text-md leading-relaxed">
           I thrive on creating seamless user experiences and collaborating with
-          bold thinkers ready to disrupt industries. Let's build something people
-          love—and can't live without.
+          bold thinkers ready to disrupt industries. Let's build something
+          people love—and can't live without.
         </p>
 
         <div className="mt-6 text-lg bg-clip-text text-transparent bg-text-header font-bold">
