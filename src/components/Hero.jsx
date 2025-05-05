@@ -2,6 +2,7 @@ import React from "react";
 import "../style.css";
 import avatar from "../assets/avatar.png";
 import arrow from "../assets/arrow.svg";
+import Button from "./ui/Button";
 
 const Hero = () => {
   return (
@@ -27,14 +28,14 @@ const Hero = () => {
           Hi! I’m Abdulbasset, a Full-stack Developer based in Algeria.
         </h3>
         <div>
-          <button className="btn px-6 py-3 border border-gray-500 rounded-md font-semibold hover:text-slate-300 group transition duration-300">
+          <Button>
             See My Work
             <img
               src={arrow}
               alt="Arrow"
               className="inline-block ml-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
-          </button>
+          </Button>
         </div>
       </div>
     </section>

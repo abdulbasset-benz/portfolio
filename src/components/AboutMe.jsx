@@ -1,5 +1,4 @@
-import React from "react";
-import "../style.css";
+import Button from "./ui/Button";
 
 const AboutMe = () => {
   return (
@@ -38,13 +37,12 @@ const AboutMe = () => {
           Got a vision? Let's make it{" "}
           <span className="text-white">UNSTOPPABLE</span>
         </div>
-
-        <button className="btn flex items-center py-3 px-6 mt-6 border border-gray-500 rounded-md font-semibold hover:text-slate-300 group transition duration-300">
+        <Button variant="about">
           Contact Me
           <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
             🚀
           </span>
-        </button>
+        </Button>
       </div>
     </section>
   );

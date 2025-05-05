@@ -7,6 +7,7 @@ import rightSpotlight from "../assets/right-spotlight.svg";
 import gridPattern from "../assets/grid-pattern.svg";
 import "../style.css";
 import { useState } from "react";
+import Button from "./ui/Button";
 
 const Navigation = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -68,10 +69,10 @@ const Navigation = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:flex items-center space-x-10 z-10">
-          <button className="md:block text-white font-semibold px-4 py-2 rounded-lg hover:bg-purple-700 border border-purple-700 hover:text-white transition duration-300 cursor-pointer">
-            Contact me
-          </button>
+        <div className="hidden md:flex  items-center space-x-10 z-10">
+          <Button variant="navbar" className="text-white">
+            contact me
+          </Button>
 
           <img
             src={light}
@@ -79,6 +80,7 @@ const Navigation = () => {
             className="h-8 w-8 hidden md:inline-block cursor-pointer hover:rotate-90 transition duration-300 hover:fill-purple-500"
           />
         </div>
+
         <img
           src={hamburger}
           alt="Menu"
