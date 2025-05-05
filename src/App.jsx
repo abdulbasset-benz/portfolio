@@ -6,6 +6,7 @@ import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
 import Process from "./components/Process";
 import Projects from "./components/Projects";
+import Techstack from "./components/Techstack";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Process />
       <Projects />
+      <Techstack />
     </div>
   );
 }

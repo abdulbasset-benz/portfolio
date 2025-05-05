@@ -10,16 +10,16 @@ import react from "../assets/stack/react.svg";
 import tailwindcss from "../assets/stack/tailwindcss.svg";
 
 const techIcons = [
-  { src: css, alt: "CSS" },
-  { src: git, alt: "Git" },
   { src: html5, alt: "HTML5" },
+  { src: css, alt: "CSS" },
   { src: javascript, alt: "JavaScript" },
-  { src: laravel, alt: "Laravel" },
+  { src: php, alt: "PHP" },
   { src: mysql, alt: "MySQL" },
   { src: nodejs, alt: "Node.js" },
-  { src: php, alt: "PHP" },
-  { src: react, alt: "React" },
   { src: tailwindcss, alt: "Tailwind CSS" },
+  { src: react, alt: "React" },
+  { src: laravel, alt: "Laravel" },
+  { src: git, alt: "Git" },
 ];
 
 export default function Techstack() {
