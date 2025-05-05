@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.svg";
 import hamburger from "../assets/vector.svg";
+import logo from "../assets/logo.svg";
 import light from "../assets/light.svg";
 import leftSpotlight from "../assets/left-spotlight.svg";
 import rightSpotlight from "../assets/right-spotlight.svg";
