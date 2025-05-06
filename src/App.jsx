@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
@@ -8,6 +10,7 @@ import Process from "./components/Process";
 import Projects from "./components/Projects";
 import Techstack from "./components/Techstack";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
       <Projects />
       <Techstack />
       <Contact />
+      <Footer />
     </div>
   );
 }
