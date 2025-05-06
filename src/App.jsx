@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Process from "./components/Process";
 import Projects from "./components/Projects";
 import Techstack from "./components/Techstack";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Process />
       <Projects />
       <Techstack />
+      <Contact />
     </div>
   );
 }
