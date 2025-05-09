@@ -29,3 +29,13 @@
     @apply bg-primary antialiased;
   }
 }
+
+@layer utilities {
+  .section {
+    @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
+  }
+
+  .section-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
