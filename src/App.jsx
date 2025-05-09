@@ -2,29 +2,38 @@ import React from "react";
 import "./style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
-import AboutMe from "./components/AboutMe";
-import Services from "./components/Services";
-import Process from "./components/Process";
-import Projects from "./components/Projects";
-import Techstack from "./components/Techstack";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-
+import LazySection from "./components/LazySection";
+import Layout from "./components/Layout";
 function App() {
   return (
-    <div className="bg-primary h-screen antialiased">
-      <Navigation />
+    <Layout>
       <Hero />
-      <AboutMe />
-      <Services />
-      <Process />
-      <Projects />
-      <Techstack />
-      <Contact />
-      <Footer />
-    </div>
+      <LazySection
+        importFunc={() => import("./components/AboutMe")}
+        delay={100}
+      />
+      <LazySection
+        importFunc={() => import("./components/Services")}
+        delay={200}
+      />
+      <LazySection
+        importFunc={() => import("./components/Process")}
+        delay={300}
+      />
+      <LazySection
+        importFunc={() => import("./components/Projects")}
+        delay={400}
+      />
+      <LazySection
+        importFunc={() => import("./components/Techstack")}
+        delay={500}
+      />
+      <LazySection
+        importFunc={() => import("./components/Contact")}
+        delay={600}
+      />
+    </Layout>
   );
 }
 
