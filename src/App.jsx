@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Hero from "./components/Hero";
 import LazySection from "./components/LazySection";
 import Layout from "./components/Layout";
+
 function App() {
   return (
     <Layout>
