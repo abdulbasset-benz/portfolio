@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div>
           <button className="font-clash bg-primary py-2 px-6 text-white font-semibold">
-            Let's Talk
+            Book  a  Call
           </button>
         </div>
 
