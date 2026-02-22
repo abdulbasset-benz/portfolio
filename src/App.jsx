@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation"
 import Hero from "./components/Hero"
 import Porjects from "./components/Projects"
 import Services from "./components/Services"
+import Cta from "./components/Cta"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Hero />
     <Porjects />
     <Services />
+    <Cta />
    </section>
   )
 }
