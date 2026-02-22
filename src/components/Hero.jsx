@@ -1,0 +1,46 @@
+const Hero = () => {
+  return (
+    <div className="pt-15 h-screen">
+      <div className="flex flex-col items-center justify-around h-full p-2 gap-7">
+        <div className="space-y-5">
+          <h1 className="text-center font-clash font-bold uppercase text-6xl">
+            digital designer
+          </h1>
+          <p className="text-center font-instru text-2xl font-medium text-gray-600">
+            hey there, i'm Abdulbasset, a digital designer with a passion for
+            transforming into captivating visual experiences
+          </p>
+        </div>
+
+        <div className="w-full">
+          <ul className="flex justify-between">
+            <li className="font-clash font-thin">UI/UX design</li>
+            <li className="font-clash font-thin">Web development</li>
+          </ul>
+        </div>
+
+        <div>
+          <button className="font-clash bg-primary py-2 px-6 text-white font-semibold">
+            Let's Talk
+          </button>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="relative flex items-center justify-center">
+            {/* Pulse ring */}
+            <span className="absolute h-3 w-3 rounded-full bg-[#16db65]/60 animate-ping"></span>
+
+            {/* Your bullet dot */}
+            <span className="text-[#16db65] text-3xl leading-none relative z-10">
+              •
+            </span>
+          </span>
+
+          <h1 className="font-medium font-inter">Open to work</h1>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
