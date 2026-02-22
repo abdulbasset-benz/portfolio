@@ -8,7 +8,7 @@ const Hero = () => {
           </h1>
           <p className="text-center font-instru text-2xl font-medium text-gray-600">
             hey there, i'm Abdulbasset, a digital designer with a passion for
-            transforming into captivating visual experiences
+            transforming ideas into captivating visual experiences
           </p>
         </div>
 
@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div>
           <button className="font-clash bg-primary py-2 px-6 text-white font-semibold">
-            Book  a  Call
+            Get a Free Project Quote
           </button>
         </div>
 
@@ -36,7 +36,10 @@ const Hero = () => {
             </span>
           </span>
 
-          <h1 className="font-medium font-inter">Open to work</h1>
+          <h1 className="font-medium font-inter">
+            {" "}
+            Available for freelance projects
+          </h1>
         </div>
       </div>
     </div>
