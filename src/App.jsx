@@ -1,9 +1,9 @@
-import { ChevronLast } from "lucide-react"
 import Navigation from "./components/Navigation"
 import Hero from "./components/Hero"
 import Porjects from "./components/Projects"
 import Services from "./components/Services"
 import Cta from "./components/Cta"
+import About from "./components/About"
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     <Navigation />
     <Hero />
     <Porjects />
+    <About />
     <Services />
     <Cta />
    </section>

@@ -53,7 +53,7 @@ const Projects = () => {
 
       {/* call to action */}
       <div className="flex justify-center my-10">
-        <button className="font-inter rounded-lg bg-primary py-2 px-6 text-white font-semibold capitalize">
+        <button className="font-inter bg-primary py-2 px-6 text-white font-semibold capitalize">
           View more projects
         </button>
       </div>

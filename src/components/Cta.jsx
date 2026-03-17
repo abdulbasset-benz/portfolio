@@ -13,7 +13,7 @@ const Cta = () => {
           attracts customers and drives real business results.
         </p>
 
-        <button className="font-clash rounded-lg bg-primary py-3 px-8 text-white font-semibold capitalize">
+        <button className="font-clash bg-primary py-2 px-8 text-white font-semibold capitalize">
           Get a Free Strategy Call
         </button>
       </div>
