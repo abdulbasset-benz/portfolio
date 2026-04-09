@@ -13,7 +13,7 @@ const Projects = () => {
       </div>
       {/* projects section */}
       <div className="flex flex-col items-center gap-30">
-        <div className="project-card p-2 flex flex-col gap-4 max-w-3xl">
+        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
           <div className="project-img rounded-md overflow-hidden">
             <img src={archi} alt="" />
           </div>
@@ -27,12 +27,12 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-card p-2 flex flex-col gap-4 max-w-3xl">
+        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
           <div className="project-img rounded-md overflow-hidden">
             <img src={archi} alt="" />
           </div>
           <div className="project-info flex items-center justify-between">
-            <h1 className="font-inter text-[clamp(1rem,4vw,1.5rem)] text-gray-900">
+            <h1 className="font-clash font-semibold text-[clamp(1rem,4vw,1.5rem)] text-gray-900">
               Miss Kitty
             </h1>
             <h3 className="font-clash text-[clamp(1rem,4vw,1.5rem)] text-gray-400">
@@ -41,7 +41,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-card p-2 flex flex-col gap-4 max-w-3xl">
+        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
           <div className="project-img rounded-md overflow-hidden">
             <img src={archi} alt="" />
           </div>
@@ -55,7 +55,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-card p-2 flex flex-col gap-4 max-w-3xl">
+        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
           <div className="project-img rounded-md overflow-hidden">
             <img src={archi} alt="" />
           </div>
