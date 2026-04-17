@@ -5,7 +5,7 @@ const Projects = () => {
     <div className="h-full overflow-hidden md:p-10">
       <div className="py-5 flex justify-center">
         <h1 className="font-clash font-medium text-[clamp(3.8rem,8vw,7rem)] leading-[clamp(1em,0.7em,2em)] text-center">
-          <span className="text-primary text-8xl leading-none relative z-10">
+          <span className="text-primary text-[4rem] md:text-[4.5rem] lg:text-[6rem] leading-none relative z-10">
             •
           </span>{" "}
           Latest <br /> Projects
