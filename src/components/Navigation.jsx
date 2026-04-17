@@ -94,7 +94,7 @@ const Navigation = () => {
               <a
                 key={s}
                 href="#"
-                className="text-white/70 text-sm hover:text-white transition-colors"
+                className="text-white/90 text-sm hover:text-white transition-colors"
               >
                 {s}
               </a>
