@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-import projectImg from "../assets/hero.png";
+import projectImg from "../assets/mockup.jpg";
 const projects = [
   {
     id: 1,
@@ -102,10 +102,10 @@ const Projects = () => {
           <NavLink
             to={`/projects/${project.id}`}
             key={project.id}
-            className="group bg-[#e8e5de] rounded-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
+            className="group bg-[#e2e2e2] rounded-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
           >
             {/* Image */}
-            <div className="relative w-full aspect-16/10 overflow-hidden bg-[#d0cdc6]">
+            <div className="relative w-full aspect-16/10 overflow-hidden bg-[#b4b4b4]">
               <img
                 src={project.image}
                 alt={project.title}
@@ -118,17 +118,17 @@ const Projects = () => {
 
             {/* Body */}
             <div className="p-4">
-              <h2 className="font-clash font-semibold text-[15px] text-[#0d0d0d] tracking-tight mb-1">
+              <h2 className="font-clash font-semibold text-[15px] text-[#0e0909] tracking-tight mb-1">
                 {project.title}
               </h2>
-              <p className="text-xs font-inter text-gray-500 leading-relaxed mb-3">
+              <p className="text-xs font-inter text-gray-600 leading-relaxed mb-3">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] font-inter font-semibold uppercase tracking-widest text-gray-500 border border-gray-300 px-2 py-0.5 rounded-sm"
+                    className="text-[10px] font-inter font-semibold uppercase tracking-widest text-gray-500 border border-gray-600 px-2 py-0.5 rounded-sm"
                   >
                     {tagLabel[tag]}
                   </span>
