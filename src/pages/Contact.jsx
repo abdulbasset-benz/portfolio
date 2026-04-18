@@ -19,7 +19,7 @@ export default function Contact() {
     formState: { errors, isSubmitSuccessful },
   } = useForm({
     defaultValues: {
-      hasWebsite: "yes",
+      hasWebsite: "no",
       improvements: [],
       projectTypes: [],
       budget: "",
@@ -75,11 +75,11 @@ export default function Contact() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-5xl mx-auto px-6 py-25">
+    <main className="min-h-screen bg-white font-inter">
+      <div className="max-w-5xl mx-auto px-3 py-25">
         {/* Page header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mb-16">
-          <h1 className="font-clash font-extrabold text-[clamp(3rem,8vw,5rem)] leading-none tracking-tight">
+          <h1 className="font-inter font-extrabold text-[clamp(3rem,8vw,5rem)] leading-none tracking-tight">
             Let's Talk
           </h1>
           <p className="text-sm font-inter text-gray-500 leading-relaxed md:pt-2">
@@ -89,38 +89,38 @@ export default function Contact() {
         </div>
 
         {/* Form card */}
-        <div className="max-w-2xl mx-auto bg-[#161616] rounded-xl p-8 md:p-12">
+        <div className="max-w-2xl mx-auto bg-[#222020] rounded-xl px-4 py-5  md:p-12">
           <h2 className="font-clash font-extrabold text-[clamp(1.5rem,4vw,2rem)] text-white leading-tight mb-2">
             Get your free quote
             <br />
             in <span className="text-primary">24 hours</span>
           </h2>
-          <p className="text-xs text-gray-600 mb-10">
+          <p className="text-xs text-gray-400 mb-10 font-inter">
             Fill the form so we can get an accurate evaluation of your project.
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             {/* ── Project details ── */}
             <section>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-600 mb-4">
+                  <p className="text-md font-semibold text-white mb-3">
                 Project details
               </p>
 
               {/* Has website toggle */}
-              <p className="text-xs text-gray-500 mb-3">
+                  <p className="text-md font-semibold text-white mb-3">
                 Do you currently have a website?
               </p>
               <Controller
                 name="hasWebsite"
                 control={control}
                 render={({ field }) => (
-                  <div className="flex gap-3 mb-6">
+                  <div className="grid grid-cols-2 gap-2 mb-6">
                     {["yes", "no"].map((val) => (
                       <button
                         type="button"
                         key={val}
                         onClick={() => field.onChange(val)}
-                        className={`flex-1 py-2.5 rounded-md text-sm font-semibold border transition-all capitalize ${
+                        className={`flex-1 py-2.5  text-sm font-semibold border transition-all capitalize ${
                           field.value === val
                             ? "bg-primary border-primary text-white"
                             : "bg-transparent border-white/10 text-gray-500 hover:border-white/25"
@@ -157,7 +157,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <p className="text-xs text-gray-500 mb-3">
+                  <p className="text-md font-semibold text-white mb-3">
                       What would you like to improve?
                     </p>
                     <Controller
@@ -167,7 +167,7 @@ export default function Contact() {
                         validate: (v) => v.length > 0 || "Select at least one",
                       }}
                       render={({ field }) => (
-                        <div className="flex flex-wrap gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                           {IMPROVEMENTS.map((item) => {
                             const active = field.value.includes(item);
                             return (
@@ -181,7 +181,7 @@ export default function Contact() {
                                       : [...field.value, item],
                                   )
                                 }
-                                className={`px-4 py-2 rounded-md text-xs font-semibold border transition-all ${
+                                className={`px-4 py-2 text-xs font-semibold border transition-all ${
                                   active
                                     ? "bg-primary border-primary text-white"
                                     : "bg-transparent border-white/10 text-gray-500 hover:border-white/25"
@@ -215,7 +215,7 @@ export default function Contact() {
               {/* NO branch */}
               {hasWebsite === "no" && (
                 <div className="animate-in fade-in duration-200">
-                  <p className="text-xs text-gray-500 mb-3">
+                  <p className="text-md font-semibold text-white mb-3">
                     Select your project type
                   </p>
                   <Controller
@@ -226,7 +226,8 @@ export default function Contact() {
                         v.length > 0 || "Select at least one type",
                     }}
                     render={({ field }) => (
-                      <div className="flex flex-wrap gap-2">
+                      <div className="grid grid-cols-2 gap-2">
+                        {" "}
                         {PROJECT_TYPES.map((item) => {
                           const active = field.value.includes(item);
                           return (
@@ -240,10 +241,10 @@ export default function Contact() {
                                     : [...field.value, item],
                                 )
                               }
-                              className={`px-4 py-2 rounded-md text-xs font-semibold border transition-all ${
+                              className={`px-4 py-2  text-xs font-semibold border transition-all ${
                                 active
                                   ? "bg-primary border-primary text-white"
-                                  : "bg-transparent border-white/10 text-gray-500 hover:border-white/25"
+                                  : "bg-transparent border-white/10 text-gray-400 hover:border-white/25"
                               }`}
                             >
                               {item}
@@ -264,7 +265,7 @@ export default function Contact() {
 
             {/* ── Budget ── */}
             <section>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-600 mb-4">
+              <p className="text-md font-semibold text-white mb-3">
                 Budget range
               </p>
               <Controller
@@ -272,13 +273,13 @@ export default function Contact() {
                 control={control}
                 rules={{ required: "Please select a budget range" }}
                 render={({ field }) => (
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {BUDGETS.map((item) => (
                       <button
                         type="button"
                         key={item}
                         onClick={() => field.onChange(item)}
-                        className={`px-4 py-2 rounded-md text-xs font-semibold border transition-all ${
+                        className={`px-4 py-2 text-xs font-semibold border transition-all ${
                           field.value === item
                             ? "bg-primary border-primary text-white"
                             : "bg-transparent border-white/10 text-gray-500 hover:border-white/25"
@@ -299,7 +300,7 @@ export default function Contact() {
 
             {/* ── Personal info ── */}
             <section className="space-y-4">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-600">
+              <p className="text-md font-semibold text-white mb-3">
                 Personal info
               </p>
               <div>
@@ -340,7 +341,7 @@ export default function Contact() {
 
             {/* ── Project description ── */}
             <section>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-600 mb-4">
+              <p className="text-md font-semibold text-white mb-3">
                 Describe your project
               </p>
               <textarea
