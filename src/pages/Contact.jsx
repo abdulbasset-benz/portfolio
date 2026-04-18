@@ -90,24 +90,24 @@ export default function Contact() {
 
         {/* Form card */}
         <div className="max-w-2xl mx-auto bg-[#222020] rounded-xl px-4 py-5  md:p-12">
-          <h2 className="font-clash font-extrabold text-[clamp(1.5rem,4vw,2rem)] text-white leading-tight mb-2">
+          <h2 className="font-clash md:text-center font-extrabold text-[clamp(1.5rem,4vw,2rem)] text-white leading-tight mb-2">
             Get your free quote
             <br />
             in <span className="text-primary">24 hours</span>
           </h2>
-          <p className="text-xs text-gray-400 mb-10 font-inter">
+          <p className="text-xs md:text-center text-gray-400 mb-10 font-inter">
             Fill the form so we can get an accurate evaluation of your project.
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             {/* ── Project details ── */}
             <section>
-                  <p className="text-md font-semibold text-white mb-3">
+              <p className="text-md font-semibold text-white mb-3">
                 Project details
               </p>
 
               {/* Has website toggle */}
-                  <p className="text-md font-semibold text-white mb-3">
+              <p className="text-md font-semibold text-white mb-3">
                 Do you currently have a website?
               </p>
               <Controller
@@ -157,7 +157,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                  <p className="text-md font-semibold text-white mb-3">
+                    <p className="text-md font-semibold text-white mb-3">
                       What would you like to improve?
                     </p>
                     <Controller
@@ -167,7 +167,7 @@ export default function Contact() {
                         validate: (v) => v.length > 0 || "Select at least one",
                       }}
                       render={({ field }) => (
-                      <div className="grid grid-cols-2 gap-2">
+                        <div className="grid grid-cols-2 gap-2">
                           {IMPROVEMENTS.map((item) => {
                             const active = field.value.includes(item);
                             return (
@@ -360,10 +360,10 @@ export default function Contact() {
             </section>
 
             {/* Submit */}
-            <div>
+            <div className="flex flex-col items-center">
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-sm py-4 rounded-md transition-colors"
+                className="font-clash bg-primary py-2 px-6 text-white font-semibold"
               >
                 Get My Free Quote
               </button>
