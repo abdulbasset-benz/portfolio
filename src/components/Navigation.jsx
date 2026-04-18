@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 import { TextAlignJustify, X } from "lucide-react";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <div>
-      <div className="w-full fixed top-0 left-0 z-40">
+      <div
+        className={`w-full fixed top-0 left-0 z-40 transition-all duration-300 ${
+          scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        }`}
+      >
         <div className="flex justify-between items-center p-2 md:p-4 lg:p-8 max-w-325 mx-auto">
           <h1 className="font-bold font-clash text-[clamp(1.2rem,2vw,1.5rem)] capitalize">
             Abdulbasset-benz
@@ -24,13 +35,20 @@ const Navigation = () => {
           {/* Desktop nav */}
           <div className="hidden lg:flex gap-5 font-semibold font-inter leading-tight text-xl">
             <ul className="flex items-center gap-5 text-gray-700">
-              {["/ Home", "/projects Projects", "/about About", "/contact Contact"].map((item) => {
+              {[
+                "/ Home",
+                "/projects Projects",
+                "/about About",
+                "/contact Contact",
+              ].map((item) => {
                 const [to, label] = item.split(" ");
                 return (
                   <li key={to}>
                     <NavLink
                       to={to}
-                      className={({ isActive }) => isActive ? "text-primary" : ""}
+                      className={({ isActive }) =>
+                        isActive ? "text-primary" : ""
+                      }
                     >
                       {label}
                     </NavLink>
@@ -103,15 +121,20 @@ const Navigation = () => {
         </div>
 
         {/* Dark CTA panel */}
-        <div className="bg-[#0f0f0f] px-6 py-7 flex flex-col gap-3"
+        <div
+          className="bg-[#0f0f0f] px-6 py-7 flex flex-col gap-3"
           style={{
             backgroundImage:
               "repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(255,255,255,.03) 28px,rgba(255,255,255,.03) 29px),repeating-linear-gradient(90deg,transparent,transparent 28px,rgba(255,255,255,.03) 28px,rgba(255,255,255,.03) 29px)",
           }}
         >
-          <p className="text-primary text-xs tracking-widest uppercase">Got an Idea?</p>
+          <p className="text-primary text-xs tracking-widest uppercase">
+            Got an Idea?
+          </p>
           <p className="text-white text-2xl font-bold font-clash leading-snug tracking-tight">
-            Let's craft<br />brilliant together!
+            Let's craft
+            <br />
+            brilliant together!
           </p>
           <NavLink
             to="/contact"
