@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import archi from "../assets/archis.jpg";
 
 const Projects = () => {
@@ -72,9 +73,12 @@ const Projects = () => {
 
       {/* call to action */}
       <div className="flex justify-center my-10">
-        <button className="font-inter bg-primary py-2 px-6 text-white font-semibold capitalize">
+        <NavLink
+          to="/projects"
+          className="font-inter bg-primary py-2 px-6 text-white font-semibold capitalize"
+        >
           View more projects
-        </button>
+        </NavLink>
       </div>
     </div>
   );

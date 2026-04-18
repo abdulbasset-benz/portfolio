@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Cta = () => {
   return (
@@ -13,9 +14,12 @@ const Cta = () => {
           attracts customers and drives real business results.
         </p>
 
-        <button className="font-clash bg-primary py-2 px-8 text-white font-semibold capitalize">
+        <NavLink
+          to="/contact"
+          className="font-clash bg-primary py-2 px-6 text-white font-semibold"
+        >
           Get a Free Project Quote
-        </button>
+        </NavLink>
       </div>
     </div>
   );
