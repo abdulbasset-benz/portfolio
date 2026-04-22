@@ -1,5 +1,5 @@
 import { useForm, Controller } from "react-hook-form";
-import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const PROJECT_TYPES = ["UI/UX", "Landing Page", "Portfolio", "E-commerce"];
 const IMPROVEMENTS = [
@@ -11,6 +11,8 @@ const IMPROVEMENTS = [
 const BUDGETS = ["< $500", "$500–$1k", "$1k–$3k", "$3k+"];
 
 export default function Contact() {
+    const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -31,6 +33,8 @@ export default function Contact() {
   const onSubmit = (data) => {
     console.log(data);
     // plug in EmailJS / Resend / your backend here
+        navigate("/thank-you");
+
   };
 
   // --- Thank you screen ---
