@@ -2,55 +2,50 @@ import { NavLink } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="pt-24 h-screen">
-      <div className="flex flex-col items-center justify-around h-full p-2 gap-7">
-        <div className="space-y-5">
-          <h1 className="text-center font-clash font-bold uppercase text-[clamp(3.8rem,10vw,7rem)] leading-[clamp(1em,-0.02em,0.02em)]">
-            digital <br />
-            designer
+    <div className="pt-24 min-h-screen flex items-center">
+      <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8 gap-8 py-12">
+
+        {/* Headline + subheadline */}
+        <div className="space-y-5 text-center max-w-5xl mx-auto">
+          <h1 className="font-clash font-bold uppercase text-center tracking-normal leading-[0.95] text-[clamp(2.8rem,8vw,5rem)]">
+            Websites for Luxury Real Estate & Interior Design Brands
           </h1>
-          <p className="text-center max-w-xl lg:max-w-2xl font-inter text-[clamp(1rem,2.5vw,1.5rem)] text-gray-600">
-            hey there, i'm Abdulbasset, a digital designer with a passion for
-            transforming ideas into captivating visual experiences
+          <p className="text-center mx-auto max-w-xl font-inter text-[clamp(1rem,2vw,1.25rem)] text-gray-500 leading-relaxed">
+            I'm Abdulbasset — a fullstack developer and designer who builds
+            premium web experiences for property developers and design studios
+            that refuse to look ordinary online.
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 mx-auto">
-          <ul className="flex justify-between">
-            <li className="font-clash font-normal text-gray-800 text-[clamp(1rem,1.8vw,1.5rem)] border-b border-dashed px-2 border-primary">
-              UI/UX design
-            </li>
-            <li className="font-clash font-normal text-gray-800 text-[clamp(1rem,1.8vw,1.5rem)] border-b border-dashed px-2 border-primary">
-              Web development
-            </li>
-          </ul>
-        </div>
+        {/* Services list */}
+        <ul className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16 w-full max-w-lg">
+          <li className="font-clash font-normal text-gray-800 text-[clamp(0.95rem,1.6vw,1.25rem)] border-b border-dashed border-primary px-2 pb-0.5 text-center">
+            UI/UX Design
+          </li>
+          <li className="font-clash font-normal text-gray-800 text-[clamp(0.95rem,1.6vw,1.25rem)] border-b border-dashed border-primary px-2 pb-0.5 text-center">
+            Web Development
+          </li>
+        </ul>
 
-        <div>
-          <NavLink
-            to="/contact"
-            className="font-clash bg-primary py-2 px-6 text-white font-semibold"
-          >
-            Get a Free Project Quote
-          </NavLink>
-        </div>
+        {/* CTA */}
+        <NavLink
+          to="/contact"
+          className="font-inter bg-primary py-3 px-8 text-white font-semibold text-[clamp(0.9rem,1.5vw,1.1rem)] hover:opacity-90 transition-opacity"
+        >
+          Start a Project
+        </NavLink>
 
-        <div className="flex items-center gap-2">
+        {/* Availability badge */}
+        <div className="flex items-center justify-center gap-2">
           <span className="relative flex items-center justify-center">
-            {/* Pulse ring */}
-            <span className="absolute h-3 w-3 rounded-full bg-[#16db65]/60 animate-ping"></span>
-
-            {/* Your bullet dot */}
-            <span className="text-[#16db65] text-3xl leading-none relative z-10">
-              •
-            </span>
+            <span className="absolute h-3 w-3 rounded-full bg-[#16db65]/60 animate-ping" />
+            <span className="text-[#16db65] text-2xl leading-none relative z-10">•</span>
           </span>
-
-          <h1 className="font-medium font-clash">
-            {" "}
+          <p className="font-medium font-inter text-[clamp(0.85rem,1.4vw,1rem)]">
             Available for freelance projects
-          </h1>
+          </p>
         </div>
+
       </div>
     </div>
   );
