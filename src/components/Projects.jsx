@@ -1,86 +1,136 @@
 import { NavLink } from "react-router";
 import archi from "../assets/archis.jpg";
 
-const Projects = () => {
-  return (
-    <div className="h-full overflow-hidden md:p-10">
-      <div className="py-5 flex justify-center">
-        <h1 className="font-clash font-medium text-[clamp(3.8rem,8vw,7rem)] leading-[clamp(1em,0.7em,2em)] text-center">
-          <span className="text-primary text-[4rem] md:text-[4.5rem] lg:text-[6rem] leading-none relative z-10">
-            •
-          </span>{" "}
-          Latest <br /> Projects
-        </h1>
-      </div>
-      {/* projects section */}
-      <div className="flex flex-col items-center gap-30">
-        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
-          <div className="project-img rounded-md overflow-hidden">
-            <img src={archi} alt="" />
-          </div>
-          <div className="project-info flex items-center justify-between">
-            <h1 className="font-clash font-semibold text-[clamp(1rem,4vw,2rem)] text-gray-900">
-              Architex
-            </h1>
-            <h3 className="font-clash text-[clamp(1rem,4vw,1.5rem)] text-gray-400 ">
-              UI/UX - Web Dev
-            </h3>
-          </div>
-        </div>
+const projects = [
+  {
+    id: 1,
+    image: archi,
+    title: "Benak Hills",
+    category: "Luxury Real Estate",
+    tags: ["UI/UX", "Web Dev"],
+    alt: "Benak Hills luxury residency website",
+  },
+  {
+    id: 2,
+    image: archi,
+    title: "Miss Kitty",
+    category: "Interior Design Brand",
+    tags: ["UI/UX", "Web Dev"],
+    alt: "Miss Kitty interior design studio website",
+  },
+  {
+    id: 3,
+    image: archi,
+    title: "Architex",
+    category: "Architecture Studio",
+    tags: ["UI/UX", "Web Dev"],
+    alt: "Architex architecture studio website",
+  },
+  {
+    id: 4,
+    image: archi,
+    title: "Archite Y",
+    category: "Property Development",
+    tags: ["Web Dev"],
+    alt: "Archite Y property development website",
+  },
+];
 
-        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
-          <div className="project-img rounded-md overflow-hidden">
-            <img src={archi} alt="" />
-          </div>
-          <div className="project-info flex items-center justify-between">
-            <h1 className="font-clash font-semibold text-[clamp(1rem,4vw,1.5rem)] text-gray-900">
-              Miss Kitty
-            </h1>
-            <h3 className="font-clash text-[clamp(1rem,4vw,1.5rem)] text-gray-400">
-              UI/UX
-            </h3>
-          </div>
-        </div>
+const ProjectCard = ({ project, index, featured = false }) => (
+  <div className="group flex flex-col gap-3 cursor-pointer">
+    {/* Image */}
+    <div
+      className={`overflow-hidden bg-gray-100 relative ${
+        featured ? "aspect-[16/9]" : "aspect-[4/3]"
+      }`}
+    >
+      <img
+        src={project.image}
+        alt={project.alt}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+      />
+      <span className="absolute top-3 right-4 font-inter text-xs text-white/60 tracking-widest">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+    </div>
 
-        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
-          <div className="project-img rounded-md overflow-hidden">
-            <img src={archi} alt="" />
-          </div>
-          <div className="project-info flex items-center justify-between">
-            <h1 className="font-clash font-semibold text-[clamp(1rem,4vw,1.5rem)] text-gray-900">
-              Benak Hills
-            </h1>
-            <h3 className="font-clash text-[clamp(1rem,4vw,1.5rem)] text-gray-400">
-              UI/UX
-            </h3>
-          </div>
-        </div>
-
-        <div className="project-card p-2 flex flex-col gap-1 max-w-3xl">
-          <div className="project-img rounded-md overflow-hidden">
-            <img src={archi} alt="" />
-          </div>
-          <div className="project-info flex items-center justify-between">
-            <h1 className="font-clash font-semibold text-[clamp(1rem,4vw,1.5rem)] text-gray-900">
-              Archite Y
-            </h1>
-            <h3 className="font-clash text-[clamp(1rem,4vw,1.5rem)] text-gray-400">
-              Web Development
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      {/* call to action */}
-      <div className="flex justify-center my-10">
-        <NavLink
-          to="/projects"
-          className="font-inter bg-primary py-2 px-6 text-white font-semibold capitalize"
+    {/* Info row */}
+    <div className="flex items-start justify-between gap-4 pt-1">
+      <div className="flex flex-col gap-0.5">
+        <h3
+          className={`font-clash font-bold leading-tight group-hover:text-[rgb(255,52,25)] transition-colors duration-300 ${
+            featured
+              ? "text-[clamp(1.6rem,3.5vw,2.4rem)]"
+              : "text-[clamp(1.2rem,2.5vw,1.6rem)]"
+          }`}
         >
-          View more projects
-        </NavLink>
+          {project.title}
+        </h3>
+        <p className="font-inter text-xs text-gray-400 tracking-wide">
+          {project.category}
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-1.5 justify-end">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="font-inter text-[10px] tracking-widest uppercase border border-gray-200 px-2 py-1 text-gray-400 group-hover:border-[rgb(255,52,25)] group-hover:text-[rgb(255,52,25)] transition-colors duration-300"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
     </div>
+
+    {/* Bottom rule */}
+    <div className="h-px bg-gray-100 group-hover:bg-[rgb(255,52,25)] transition-colors duration-500" />
+  </div>
+);
+
+const Projects = () => {
+  const [featured, ...rest] = projects;
+
+  return (
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-24">
+      <div className="max-w-6xl mx-auto flex flex-col gap-12">
+
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+          <div>
+            <p className="font-inter text-sm tracking-[0.2em] uppercase text-[rgb(255,52,25)] mb-3">
+              Selected Work
+            </p>
+            <h2 className="font-inter font-bold text-[clamp(3rem,8vw,6rem)] leading-[0.95] text-black">
+              Latest <br /> Projects
+            </h2>
+          </div>
+          <NavLink
+            to="/projects"
+            className="font-clash font-semibold text-sm tracking-widest uppercase border-b border-black pb-0.5 self-start sm:self-end hover:border-[rgb(255,52,25)] hover:text-[rgb(255,52,25)] transition-colors duration-300"
+          >
+            View All →
+          </NavLink>
+        </div>
+
+        {/* Featured — full width */}
+        <ProjectCard project={featured} index={0} featured={true} />
+
+        {/* Rest — 2 column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-14">
+          {rest.map((project, i) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={i + 1}
+              featured={false}
+            />
+          ))}
+        </div>
+
+      </div>
+    </section>
   );
 };
 

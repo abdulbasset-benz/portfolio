@@ -1,21 +1,60 @@
 const About = () => {
   return (
-    <div className="h-screen w-screen overflow-hidden relative p-2 pt-10 flex flex-col justify-center">
-      <div className="py-5">
-        <h1 className="font-clash font-medium text-[clamp(3.8rem,8vw,7rem)] leading-[clamp(1em,0.7em,2em)] text-left text-[#66666e] lg:max-w-6xl mx-auto">
-          About
-        </h1>{" "}
+    <section className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-24 flex flex-col justify-center">
+      <div className="max-w-6xl mx-auto w-full flex flex-col gap-12">
+
+        {/* Header */}
+        <div>
+          <p className="font-inter text-sm tracking-[0.2em] uppercase text-[rgb(255,52,25)] mb-3">
+            Who I Am
+          </p>
+          <h2 className="font-inter  font-medium text-[clamp(3rem,8vw,6rem)] leading-[0.95] text-[#66666e]">
+            About
+          </h2>
+        </div>
+
+        {/* Main statement */}
+        <p className="font-inter font-bold text-[clamp(1.6rem,3.5vw,2.8rem)] leading-[1.1] max-w-5xl text-black">
+          Stunning properties deserve a digital presence that converts —
+          not a template that blends in.
+        </p>
+
+        {/* Body copy */}
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-24 max-w-5xl">
+          <p className="font-inter text-[clamp(0.95rem,1.5vw,1.1rem)] text-gray-500 leading-relaxed lg:max-w-sm">
+            I'm Abdulbasset — a fullstack designer and developer based in
+            Algiers. I specialise in building premium websites for luxury
+            real estate developers and interior design studios who refuse
+            to look ordinary online.
+          </p>
+          <p className="font-inter text-[clamp(0.95rem,1.5vw,1.1rem)] text-gray-500 leading-relaxed lg:max-w-sm">
+            My edge is being both designer and developer. There's no
+            handoff, no lost details, no misaligned vision. You get one
+            person who owns the entire experience — from the first
+            impression to the final interaction.
+          </p>
+        </div>
+
+        {/* Stats row */}
+        <div className="flex flex-wrap justify-between gap-10 lg:gap-20 pt-4 border-t border-gray-100">
+          {[
+            { value: "4+", label: "Years building premium web experiences" },
+            { value: "10+", label: "Projects delivered end-to-end" },
+            { value: "100%", label: "Design and development in-house" },
+          ].map((stat) => (
+            <div key={stat.label} className="flex flex-col gap-1">
+              <span className="font-clash font-bold text-[clamp(2rem,4vw,3rem)] leading-none text-black">
+                {stat.value}
+              </span>
+              <span className="font-inter text-xs text-gray-400 max-w-[140px] leading-snug">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
       </div>
-      <div className="flex justify-center">
-        <h1 className="font-inter font-medium text-[clamp(1.5rem,2.3vw,3rem)] max-w-xl lg:max-w-6xl">
-          I build digital experiences that are simple, fast, and
-          conversion-driven. My focus isn’t just on building websites — it’s on
-          helping businesses achieve real results. Whether it’s increasing
-          sales, improving visibility, or generating more leads, every solution
-          I create is designed with that goal in mind.
-        </h1>
-      </div>
-    </div>
+    </section>
   );
 };
 
