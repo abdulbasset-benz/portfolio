@@ -55,7 +55,7 @@ const Testimonials = () => {
               {/* Author */}
               <div className="flex items-center gap-4">
                 {/* Avatar initial */}
-                <div className="w-11 h-11 rounded-full bg-black flex items-center justify-center flex-shrink-0 group-hover:bg-[rgb(255,52,25)] transition-colors duration-300">
+                <div className="w-11 h-11 rounded-full bg-black flex items-center justify-center shrink-0 group-hover:bg-[rgb(255,52,25)] transition-colors duration-300">
                   <span className="font-clash font-bold text-white text-sm">
                     {t.initial}
                   </span>
