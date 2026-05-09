@@ -1,17 +1,24 @@
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router";
 
-const PROJECT_TYPES = ["UI/UX", "Landing Page", "Portfolio", "E-commerce"];
-const IMPROVEMENTS = [
-  "Full redesign",
-  "Conversion",
-  "Performance",
-  "New Features",
+const PROJECT_TYPES = [
+  "Luxury Real Estate",
+  "Interior Design Studio",
+  "Architecture Firm",
+  "Property Development",
 ];
-const BUDGETS = ["< $500", "$500–$1k", "$1k–$3k", "$3k+"];
+
+const IMPROVEMENTS = [
+  "Full Redesign",
+  "Conversion Rate",
+  "Visual Presence",
+  "Performance & Speed",
+];
+
+const BUDGETS = ["$1k–$3k", "$3k–$5k", "$5k–$10k", "$10k+"];
 
 export default function Contact() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -23,7 +30,7 @@ export default function Contact() {
     defaultValues: {
       hasWebsite: "no",
       improvements: [],
-      projectTypes: [],
+      projectType: "",
       budget: "",
     },
   });
@@ -32,9 +39,7 @@ export default function Contact() {
 
   const onSubmit = (data) => {
     console.log(data);
-    // plug in EmailJS / Resend / your backend here
-        navigate("/thank-you");
-
+    navigate("/thank-you");
   };
 
   // --- Thank you screen ---
@@ -60,10 +65,10 @@ export default function Contact() {
           <h2 className="font-clash font-extrabold text-3xl text-white mb-3 leading-tight">
             Thank you for
             <br />
-            reaching out to us
+            reaching out
           </h2>
           <p className="text-sm text-gray-500 mb-8">
-            We will get back to you within 24 hours,
+            I'll get back to you within 24 hours,
             <br />
             don't forget to check your inbox.
           </p>
@@ -93,24 +98,19 @@ export default function Contact() {
         </div>
 
         {/* Form card */}
-        <div className="max-w-2xl mx-auto bg-[#222020] rounded-xl px-4 py-5  md:p-12">
+        <div className="max-w-2xl mx-auto bg-[#222020] rounded-xl px-4 py-5 md:p-12">
           <h2 className="font-clash md:text-center font-extrabold text-[clamp(1.5rem,4vw,2rem)] text-white leading-tight mb-2">
-            Get your free quote
+            Tell me about
             <br />
-            in <span className="text-primary">24 hours</span>
+            your <span className="text-primary">project</span>
           </h2>
           <p className="text-xs md:text-center text-gray-400 mb-10 font-inter">
-            Fill the form so we can get an accurate evaluation of your project.
+            The more detail you share, the more accurate your quote will be.
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-            {/* ── Project details ── */}
+            {/* ── Has website ── */}
             <section>
-              <p className="text-md font-semibold text-white mb-3">
-                Project details
-              </p>
-
-              {/* Has website toggle */}
               <p className="text-md font-semibold text-white mb-3">
                 Do you currently have a website?
               </p>
@@ -124,7 +124,7 @@ export default function Contact() {
                         type="button"
                         key={val}
                         onClick={() => field.onChange(val)}
-                        className={`flex-1 py-2.5  text-sm font-semibold border transition-all capitalize ${
+                        className={`flex-1 py-2.5 text-sm font-semibold border transition-all capitalize ${
                           field.value === val
                             ? "bg-primary border-primary text-white"
                             : "bg-transparent border-white/10 text-gray-500 hover:border-white/25"
@@ -137,7 +137,7 @@ export default function Contact() {
                 )}
               />
 
-              {/* YES branch */}
+              {/* YES branch — multi-select improvements */}
               {hasWebsite === "yes" && (
                 <div className="space-y-5 animate-in fade-in duration-200">
                   <div>
@@ -208,7 +208,7 @@ export default function Contact() {
                   <div>
                     <textarea
                       {...register("painPoints")}
-                      placeholder="Pain points — what bothers you about your current site?"
+                      placeholder="What bothers you most about your current site? Be specific."
                       rows={3}
                       className="w-full bg-transparent border-b border-white/10 focus:border-primary py-2.5 text-white text-sm placeholder-white/20 outline-none transition-colors resize-none"
                     />
@@ -216,51 +216,38 @@ export default function Contact() {
                 </div>
               )}
 
-              {/* NO branch */}
+              {/* NO branch — single select project type */}
               {hasWebsite === "no" && (
                 <div className="animate-in fade-in duration-200">
                   <p className="text-md font-semibold text-white mb-3">
-                    Select your project type
+                    What type of project is this?
                   </p>
                   <Controller
-                    name="projectTypes"
+                    name="projectType"
                     control={control}
-                    rules={{
-                      validate: (v) =>
-                        v.length > 0 || "Select at least one type",
-                    }}
+                    rules={{ required: "Please select a project type" }}
                     render={({ field }) => (
                       <div className="grid grid-cols-2 gap-2">
-                        {" "}
-                        {PROJECT_TYPES.map((item) => {
-                          const active = field.value.includes(item);
-                          return (
-                            <button
-                              type="button"
-                              key={item}
-                              onClick={() =>
-                                field.onChange(
-                                  active
-                                    ? field.value.filter((v) => v !== item)
-                                    : [...field.value, item],
-                                )
-                              }
-                              className={`px-4 py-2  text-xs font-semibold border transition-all ${
-                                active
-                                  ? "bg-primary border-primary text-white"
-                                  : "bg-transparent border-white/10 text-gray-400 hover:border-white/25"
-                              }`}
-                            >
-                              {item}
-                            </button>
-                          );
-                        })}
+                        {PROJECT_TYPES.map((item) => (
+                          <button
+                            type="button"
+                            key={item}
+                            onClick={() => field.onChange(item)}
+                            className={`px-4 py-2 text-xs font-semibold border transition-all ${
+                              field.value === item
+                                ? "bg-primary border-primary text-white"
+                                : "bg-transparent border-white/10 text-gray-400 hover:border-white/25"
+                            }`}
+                          >
+                            {item}
+                          </button>
+                        ))}
                       </div>
                     )}
                   />
-                  {errors.projectTypes && (
+                  {errors.projectType && (
                     <p className="text-primary text-xs mt-1">
-                      {errors.projectTypes.message}
+                      {errors.projectType.message}
                     </p>
                   )}
                 </div>
@@ -270,7 +257,7 @@ export default function Contact() {
             {/* ── Budget ── */}
             <section>
               <p className="text-md font-semibold text-white mb-3">
-                Budget range
+                What's your budget range?
               </p>
               <Controller
                 name="budget"
@@ -305,7 +292,7 @@ export default function Contact() {
             {/* ── Personal info ── */}
             <section className="space-y-4">
               <p className="text-md font-semibold text-white mb-3">
-                Personal info
+                Your details
               </p>
               <div>
                 <input
@@ -352,7 +339,7 @@ export default function Contact() {
                 {...register("description", {
                   required: "Please describe your project",
                 })}
-                placeholder="Tell me about your project and what you're looking to achieve..."
+                placeholder="Tell me about your brand, your audience, and what success looks like for you..."
                 rows={4}
                 className="w-full bg-transparent border-b border-white/10 focus:border-primary py-2.5 text-white text-sm placeholder-white/20 outline-none transition-colors resize-none"
               />
@@ -372,7 +359,7 @@ export default function Contact() {
                 Get My Free Quote
               </button>
               <p className="text-center text-[11px] text-gray-600 mt-3">
-                ⏱ Response within 24h
+                ⏱ I'll respond within 24 hours.
               </p>
             </div>
           </form>
