@@ -10,7 +10,7 @@ export default function ThankYou() {
           <img
             src={Message}
             alt="Message sent"
-            className="!w-auto !h-auto !object-contain mx-auto max-w-[280px]"
+            className="w-auto! h-auto! object-contain! mx-auto max-w-70"
           />
         </div>
 
