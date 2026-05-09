@@ -41,7 +41,7 @@ const ProjectCard = ({ project, index, featured = false }) => (
     {/* Image */}
     <div
       className={`overflow-hidden bg-gray-100 relative ${
-        featured ? "aspect-[16/9]" : "aspect-[4/3]"
+        featured ? "aspect-video" : "aspect-4/3"
       }`}
     >
       <img

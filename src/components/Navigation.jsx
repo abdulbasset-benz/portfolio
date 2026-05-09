@@ -64,7 +64,7 @@ const Navigation = () => {
       <div
         className={`
           fixed inset-0 z-50 flex flex-col lg:hidden
-          transition-transform duration-350 ease-[cubic-bezier(0.4,0,0.2,1)]
+          transition-transform duration-350 ease-in-out
           ${menuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >

@@ -46,7 +46,7 @@ const About = () => {
               <span className="font-clash font-bold text-[clamp(2rem,4vw,3rem)] leading-none text-black">
                 {stat.value}
               </span>
-              <span className="font-inter text-xs text-gray-400 max-w-[140px] leading-snug">
+              <span className="font-inter text-xs text-gray-400 max-w-35 leading-snug">
                 {stat.label}
               </span>
             </div>
