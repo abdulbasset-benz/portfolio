@@ -4,6 +4,7 @@ import archi from "../assets/archis.jpg";
 const projects = [
   {
     id: 1,
+    slug: "benak-hills",
     image: archi,
     title: "Benak Hills",
     category: "Luxury Real Estate",
@@ -12,6 +13,7 @@ const projects = [
   },
   {
     id: 2,
+    slug: "miss-kitty",
     image: archi,
     title: "Miss Kitty",
     category: "Interior Design Brand",
@@ -20,6 +22,7 @@ const projects = [
   },
   {
     id: 3,
+    slug: "architex",
     image: archi,
     title: "Architex",
     category: "Architecture Studio",
@@ -28,6 +31,7 @@ const projects = [
   },
   {
     id: 4,
+    slug: "archite-y",
     image: archi,
     title: "Archite Y",
     category: "Property Development",
@@ -37,7 +41,10 @@ const projects = [
 ];
 
 const ProjectCard = ({ project, index, featured = false }) => (
-  <div className="group flex flex-col gap-3 cursor-pointer">
+  <NavLink
+    to={`/projects/${project.slug}`}
+    className="group flex flex-col gap-3 cursor-pointer"
+  >
     {/* Image */}
     <div
       className={`overflow-hidden bg-gray-100 relative ${
@@ -86,7 +93,7 @@ const ProjectCard = ({ project, index, featured = false }) => (
 
     {/* Bottom rule */}
     <div className="h-px bg-gray-100 group-hover:bg-[rgb(255,52,25)] transition-colors duration-500" />
-  </div>
+  </NavLink>
 );
 
 const Projects = () => {
