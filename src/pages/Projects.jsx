@@ -1,60 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-import projectImg from "../assets/mockup.jpg";
-const projects = [
-  {
-    id: 1,
-    title: "Radiant skincare branding",
-    description:
-      "Radiant skincare is offering a user-centric, ad-free platform.",
-    tags: ["branding", "ui/ux"],
-    image: projectImg,
-  },
-  {
-    id: 2,
-    title: "Apex clothing Co. rebrand",
-    description: "Bold new look for an eco-conscious apparel brand.",
-    tags: ["branding", "development"],
-    image: projectImg,
-    accent: true,
-  },
-  {
-    id: 3,
-    title: "Vero app development",
-    description:
-      "Vero aimed to distinguish itself in a competitive social media landscape.",
-    tags: ["branding", "development", "ui/ux"],
-    image: projectImg,
-  },
-  {
-    id: 4,
-    title: "Stoyo branding",
-    description: "Visual identity and packaging design for a Stoyo brand.",
-    tags: ["branding"],
-    image: projectImg,
-    accent: true,
-  },
-  {
-    id: 5,
-    title: "Timeless Impressions redesign",
-    description: "Bold new look for an eco-conscious apparel brand.",
-    tags: ["ui/ux", "development"],
-    image: projectImg,
-  },
-];
-
-const filters = [
-  { label: "All", value: "all" },
-  { label: "UI/UX", value: "ui/ux" },
-  { label: "Branding", value: "branding" },
-  { label: "Development", value: "development" },
-];
-
-const tagLabel = {
-  "ui/ux": "UI/UX", // ← was "webdesign": "ui/ux"
-  branding: "Branding",
-  development: "Development",
-};
+import { projects, filters, tagLabel } from "../data/projects";
 
 const Projects = () => {
   const [active, setActive] = useState("all");
@@ -100,7 +46,8 @@ const Projects = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {visible.map((project) => (
           <NavLink
-            to={`/projects/${project.id}`}
+            // ← slug-based route instead of id
+            to={`/projects/${project.slug}`}
             key={project.id}
             className="group bg-[#e2e2e2] rounded-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
           >
