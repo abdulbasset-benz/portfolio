@@ -20,9 +20,11 @@ const Navigation = () => {
         }`}
       >
         <div className="flex justify-between items-center p-2 md:p-4 lg:p-8 max-w-325 mx-auto">
-          <h1 className="font-bold font-clash text-[clamp(1.2rem,2vw,1.5rem)] capitalize">
-            Abdulbasset-benz
-          </h1>
+          <NavLink to="/">
+            <h1 className="font-bold font-clash text-[clamp(1.2rem,2vw,1.5rem)] capitalize">
+              Abdulbasset-benz
+            </h1>
+          </NavLink>
 
           {/* Mobile trigger */}
           <div
