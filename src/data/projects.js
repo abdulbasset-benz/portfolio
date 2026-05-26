@@ -5,6 +5,8 @@
 // ─────────────────────────────────────────────────────────────
 
 import archi from "../assets/archis.jpg"; // replace per-project when you have real screenshots
+import benak from "../assets/benakhills.webp";
+import missKitty from "../assets/misskitty.webp";
 
 export const projects = [
   {
@@ -15,7 +17,7 @@ export const projects = [
     title: "Benak Hills",
     description: "A luxury residential development that sells the dream before the first viewing.",
     tags: ["ui/ux", "development"],
-    image: archi,
+    image: benak,
     accent: false,
 
     // ── CASE STUDY PAGE ───────────────────────────────────────
@@ -273,7 +275,7 @@ export const projects = [
     title: "Miss Kitty",
     description: "A fashion brand with a personality too big for a generic e-commerce template.",
     tags: ["ui/ux", "development"],
-    image: archi,
+    image: missKitty,
     accent: true,
 
     caseStudy: {

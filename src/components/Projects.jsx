@@ -1,11 +1,13 @@
 import { NavLink } from "react-router";
+import benak from "../assets/benakhills.webp";
+import missKitty from "../assets/misskitty.webp";
 import archi from "../assets/archis.jpg";
 
 const projects = [
   {
     id: 1,
     slug: "benak-hills",
-    image: archi,
+    image: benak,
     title: "Benak Hills",
     category: "Luxury Real Estate",
     tags: ["UI/UX", "Web Dev"],
@@ -14,7 +16,7 @@ const projects = [
   {
     id: 2,
     slug: "miss-kitty",
-    image: archi,
+    image: missKitty,
     title: "Miss Kitty",
     category: "Interior Design Brand",
     tags: ["UI/UX", "Web Dev"],
