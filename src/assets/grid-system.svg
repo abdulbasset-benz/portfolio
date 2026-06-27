@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1240 640" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrowStart" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M8,1 L1,4 L8,7" fill="none" stroke="#E11D48" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowEnd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,1 L7,4 L0,7" fill="none" stroke="#E11D48" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1240" height="640" fill="#FFFFFF"/>
+
+  <!-- ── Column width call-out (column 1, x:30-110) ── -->
+  <line x1="30" y1="70" x2="30" y2="130" stroke="#D4D4D8" stroke-width="1"/>
+  <line x1="110" y1="70" x2="110" y2="130" stroke="#D4D4D8" stroke-width="1"/>
+  <line x1="34" y1="55" x2="106" y2="55" stroke="#E11D48" stroke-width="1.2"
+        marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+  <text x="70" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#E11D48"
+        letter-spacing="0.5">80</text>
+
+  <!-- ── Gutter call-out (between column 1 and 2, x:110-130) ── -->
+  <line x1="110" y1="100" x2="110" y2="130" stroke="#D4D4D8" stroke-width="1"/>
+  <line x1="130" y1="100" x2="130" y2="130" stroke="#D4D4D8" stroke-width="1"/>
+  <line x1="114" y1="92" x2="126" y2="92" stroke="#E11D48" stroke-width="1.2"
+        marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+  <text x="158" y="96" text-anchor="start" font-size="11" font-weight="600" fill="#E11D48"
+        letter-spacing="0.3">20px gutter</text>
+  <line x1="148" y1="92" x2="120" y2="92" stroke="#E11D48" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+  <!-- ── 12 columns ── -->
+  <!-- col width 80, gutter 20, start x=30, total = 12*80 + 11*20 = 1180 -->
+  <!-- positions: x = 30 + i*100 -->
+  <g>
+    <rect x="30"  y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="130" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="230" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="330" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="430" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="530" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="630" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="730" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="830" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="930" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="1030" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+    <rect x="1130" y="130" width="80" height="380" fill="#F4F4F5" stroke="#E4E4E7"/>
+  </g>
+
+  <!-- column numbers -->
+  <g font-size="11" font-weight="600" fill="#A1A1AA" text-anchor="middle" letter-spacing="0.5">
+    <text x="70" y="123">01</text>
+    <text x="170" y="123">02</text>
+    <text x="270" y="123">03</text>
+    <text x="370" y="123">04</text>
+    <text x="470" y="123">05</text>
+    <text x="570" y="123">06</text>
+    <text x="670" y="123">07</text>
+    <text x="770" y="123">08</text>
+    <text x="870" y="123">09</text>
+    <text x="970" y="123">10</text>
+    <text x="1070" y="123">11</text>
+    <text x="1170" y="123">12</text>
+  </g>
+
+  <!-- overall span -->
+  <line x1="30" y1="535" x2="1210" y2="535" stroke="#D4D4D8" stroke-width="1"/>
+  <line x1="30" y1="528" x2="30" y2="542" stroke="#D4D4D8" stroke-width="1"/>
+  <line x1="1210" y1="528" x2="1210" y2="542" stroke="#D4D4D8" stroke-width="1"/>
+
+  <text x="620" y="580" text-anchor="middle" font-size="13" font-weight="700" fill="#18181B"
+        letter-spacing="0.5">12-COLUMN GRID</text>
+  <text x="620" y="602" text-anchor="middle" font-size="11" fill="#71717A"
+        letter-spacing="0.3">80px columns · 20px gutter</text>
+</svg>
