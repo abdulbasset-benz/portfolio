@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import benak from "../assets/benakhills.webp";
 import missKitty from "../assets/misskitty.webp";
-import archi from "../assets/archis.jpg";
+import Aurum from "../assets/aurum.webp";
 
 const projects = [
   {
@@ -24,9 +24,9 @@ const projects = [
   },
   {
     id: 3,
-    slug: "architex",
-    image: archi,
-    title: "Architex",
+    slug: "aurum",
+    image: Aurum,
+    title: "Aurum Estates",
     category: "Architecture Studio",
     tags: ["UI/UX", "Web Dev"],
     alt: "Architex architecture studio website",
@@ -34,7 +34,7 @@ const projects = [
   {
     id: 4,
     slug: "archite-y",
-    image: archi,
+    image: Aurum,
     title: "Archite Y",
     category: "Property Development",
     tags: ["Web Dev"],
