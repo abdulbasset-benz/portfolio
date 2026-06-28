@@ -37,9 +37,28 @@ export default function Contact() {
 
   const hasWebsite = watch("hasWebsite");
 
-  const onSubmit = (data) => {
-    console.log(data);
-    navigate("/thank-you");
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          `${encodeURIComponent(key)}=${encodeURIComponent(
+            Array.isArray(data[key]) ? data[key].join(", ") : data[key],
+          )}`,
+      )
+      .join("&");
+  };
+
+  const onSubmit = async (data) => {
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...data }),
+      });
+      navigate("/thank-you");
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
   };
 
   // --- Thank you screen ---
