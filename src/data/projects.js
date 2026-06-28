@@ -12,6 +12,7 @@ import BenakPhone from "../assets/benak-phone.jpeg";
 import AurumPhone from "../assets/aurum-phone.jpeg";
 import MisstkittyPhone from "../assets/misskitty-phone.jpeg";
 import gridSystemImg from "../assets/grid-system.svg";
+import propertyImg from "../assets/property.jpeg";
 
 export const projects = [
   {
@@ -187,7 +188,7 @@ export const projects = [
             caption: "— Listings index · editorial asymmetric grid",
           },
           {
-            src: Aurum,
+            src: propertyImg,
             caption: "— Property detail · editorial sequence, hero to specs",
           },
         ],
@@ -228,105 +229,6 @@ export const projects = [
       },
     },
   },
-
-  // {
-  //   id: 3,
-  //   slug: "archite-y",
-
-  //   title: "Archite Y",
-  //   description:
-  //     "An interior design studio with a website as considered as its spaces.",
-  //   tags: ["ui/ux", "development"],
-  //   image: Aurum,
-  //   accent: false,
-
-  //   caseStudy: {
-  //     headline: "An interior design studio that",
-  //     headlineAccent: "earns the room before you enter.",
-  //     meta: [
-  //       { label: "Type", value: "Concept Project" },
-  //       { label: "Scope", value: "UI/UX & Web Development" },
-  //       { label: "Sector", value: "Interior Design" },
-  //       { label: "Year", value: "2025" },
-  //     ],
-  //     heroImage: Aurum,
-
-  //     // Section 01 – The Problem
-  //     problem: {
-  //       heading:
-  //         "Interior design studios have a visibility trap: showing too much, saying too little.",
-  //       paragraphs: [
-  //         "The typical interior design portfolio tries to prove range by showing everything. The result is a gallery with no hierarchy, no point of view, and no sense of who the studio actually is. High-value clients — the ones commissioning full-home projects — don't need to see volume. They need to see that the studio's eye aligns with theirs.",
-  //         "The brief I set for this concept: design a studio site that communicates taste before it communicates capability.",
-  //       ],
-  //     },
-
-  //     // Section 02 – The Approach
-  //     approach: {
-  //       heading: "The edit is the argument.",
-  //       intro:
-  //         "The most important design decision on this project wasn't a colour or a typeface — it was curation. Six projects instead of twenty. Each chosen to show a different dimension of the studio's range: residential, hospitality, minimal, layered, monochrome, warm. Together they tell a coherent story. Separately, each one has room to breathe.",
-  //       pullQuote:
-  //         '"A studio that knows what to leave out inspires confidence in everything it keeps in."',
-  //       decisions: [
-  //         {
-  //           tag: "Curation",
-  //           text: "Six projects, deliberately chosen. The selection itself communicates the studio's sensibility — before a visitor reads a single word of copy. Reducing from a full portfolio to a curated edit was the hardest and most important call.",
-  //         },
-  //         {
-  //           tag: "Atmosphere",
-  //           text: "Warm off-white base with deep neutral accents. The palette is designed to feel like standing inside one of the studio's finished rooms — the website becomes an extension of the work, not a frame around it.",
-  //         },
-  //         {
-  //           tag: "Pacing",
-  //           text: "Long-scroll project pages with slow image reveals. The site doesn't rush the visitor — because the studio's clients are not people who make rushed decisions. Pacing is a positioning signal.",
-  //         },
-  //         {
-  //           tag: "Tone",
-  //           text: "Copy written to sound like a thoughtful person, not a studio trying to impress. The language is direct, warm, and specific — no superlatives, no vague claims about 'transforming spaces'.",
-  //         },
-  //       ],
-  //       detailImages: [
-  //         {
-  //           src: Aurum,
-  //           caption: "— Project index · six-project curated layout",
-  //         },
-  //         {
-  //           src: Aurum,
-  //           caption: "— Project detail · slow-reveal scroll, room photography",
-  //         },
-  //       ],
-  //     },
-
-  //     // Section 03 – Full-width image block
-  //     fullImage: {
-  //       src: Aurum,
-  //       sectionLabel: "Studio Page",
-  //       heading: "The people behind the spaces.",
-  //       body: "A studio page that introduces the team and the process without overclaiming. Clients commissioning interior design work are trusting someone with their home — the studio page needs to make that trust feel earned, not demanded. Short bios, honest process description, and photography that shows the work in progress as well as the finished result.",
-  //     },
-
-  //     // Section 04 – The Result
-  //     result: {
-  //       heading: "A portfolio that pre-qualifies before the first call.",
-  //       paragraphs: [
-  //         "The concept demonstrates how curation and pacing can do qualification work that most studios leave to their intake process. A visitor who reaches the contact form on this site already understands the studio's sensibility, price point, and process — which means the first conversation starts further along.",
-  //         "Lighthouse score of 99. A design system built for a studio that adds one or two significant projects per year — not a gallery that needs constant updating.",
-  //       ],
-  //       stats: [
-  //         { number: "6", label: "Projects Curated" },
-  //         { number: "99", label: "Lighthouse Score" },
-  //         { number: "4×", label: "Enquiry Quality Lift" },
-  //       ],
-  //     },
-
-  //     cta: {
-  //       text: "Running a design studio that deserves better clients?",
-  //       link: "/contact",
-  //       linkLabel: "Start a conversation",
-  //     },
-  //   },
-  // },
 
   {
     id: 3,
@@ -429,7 +331,7 @@ export const projects = [
       cta: {
         text: "Building a fashion brand that deserves a better digital presence?",
         link: "/contact",
-        linkLabel: "Let's talk",
+        linkLabel: "Get Your Free Quote",
       },
     },
   },

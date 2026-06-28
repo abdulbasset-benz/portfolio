@@ -2,10 +2,10 @@ import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router";
 
 const PROJECT_TYPES = [
-  "Luxury Real Estate",
-  "Interior Design Studio",
-  "Architecture Firm",
-  "Property Development",
+  "Landing Page",
+  "Full Website",
+  "E-commerce Store",
+  "Web App",
 ];
 
 const IMPROVEMENTS = [

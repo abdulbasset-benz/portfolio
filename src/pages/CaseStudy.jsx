@@ -244,7 +244,7 @@ const CaseStudy = () => {
                       src={img.src}
                       alt={img.caption}
                       type={img.type}
-                      className="w-full object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <p className="text-[10px] font-inter text-white/30 mt-3 tracking-wide">
@@ -264,13 +264,13 @@ const CaseStudy = () => {
                  or export the frame with grid lines shown.
                  Goes into: cs.gridImage (add to data)
       ══════════════════════════════════════════════════════ */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <SectionLabel number="04" label="Grid System" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* 📌 PUT HERE: Screenshot with Figma grid overlay visible */}
-            {cs.gridImage ? (
+            {/* {cs.gridImage ? (
               <div className="overflow-hidden rounded-sm bg-gray-50">
                 <Media
                   src={cs.gridImage}
@@ -311,7 +311,7 @@ const CaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════════════════════════════════════════
           SECTION F — MOBILE VERSION  [DARK BACKGROUND]
