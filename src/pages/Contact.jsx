@@ -1,4 +1,4 @@
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, useWatch } from "react-hook-form";
 import { useNavigate } from "react-router";
 
 const PROJECT_TYPES = [
@@ -23,7 +23,6 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
-    watch,
     control,
     formState: { errors, isSubmitSuccessful },
   } = useForm({
@@ -35,7 +34,7 @@ export default function Contact() {
     },
   });
 
-  const hasWebsite = watch("hasWebsite");
+  const hasWebsite = useWatch({ control, name: "hasWebsite" });
 
   const encode = (data) => {
     return Object.keys(data)
