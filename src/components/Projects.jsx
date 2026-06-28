@@ -31,15 +31,7 @@ const projects = [
     tags: ["UI/UX", "Web Dev"],
     alt: "Architex architecture studio website",
   },
-  {
-    id: 4,
-    slug: "archite-y",
-    image: Aurum,
-    title: "Archite Y",
-    category: "Property Development",
-    tags: ["Web Dev"],
-    alt: "Archite Y property development website",
-  },
+  
 ];
 
 const ProjectCard = ({ project, index, featured = false }) => (
@@ -138,7 +130,14 @@ const Projects = () => {
           ))}
         </div>
 
+      <NavLink
+            to="/projects"
+            className="font-clash font-semibold text-sm tracking-widest uppercase border-b border-black pb-0.5 self-start sm:self-end hover:border-[rgb(255,52,25)] hover:text-[rgb(255,52,25)] transition-colors duration-300"
+          >
+            View All →
+          </NavLink>
       </div>
+
     </section>
   );
 };
