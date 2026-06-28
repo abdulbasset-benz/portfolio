@@ -4,9 +4,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import webDesign from "../assets/Characters.png";
-import closeUp from "../assets/Close-Up.png";
-import panel from "../assets/panel.png";
+import webDesign from "../assets/web-design.png";
+import webDev from "../assets/code.png";
+import uiUX from "../assets/uiux.png";
+import conversion from "../assets/conversion.png";
 
 const services = [
   {
@@ -20,19 +21,19 @@ const services = [
     number: "02",
     title: "Web Development",
     description: "Fast, clean, production-ready builds.",
-    image: closeUp,
+    image: webDev,
   },
   {
     number: "03",
     title: "UI/UX Design",
     description: "Intuitive interfaces that guide visitors toward action.",
-    image: panel,
+    image: uiUX,
   },
   {
     number: "04",
     title: "Conversion Optimisation",
     description: "Strategic layout and interaction design.",
-    image: panel,
+    image: conversion,
   },
 ];
 
